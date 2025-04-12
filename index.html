@@ -1,31 +1,950 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom's Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-    </style>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_783b2f0dde6f4c310d6dda9f490250f1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
 </head>
 <body>
-    <h1>Hey, I'm Tom</h1>
-
-    <h2>About Me</h2>
-    <p>Testing</p>
-
-    <h2>What I'm Working On</h2>
-    <p>Trying web building</p>
+    
+    
+            <div class="folium-map" id="map_783b2f0dde6f4c310d6dda9f490250f1" ></div>
+        
 </body>
+<script>
+    
+    
+            var map_783b2f0dde6f4c310d6dda9f490250f1 = L.map(
+                "map_783b2f0dde6f4c310d6dda9f490250f1",
+                {
+                    center: [51.5268327, -0.1002501],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_401ceec5f0561321eadf120b01a02373 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_401ceec5f0561321eadf120b01a02373.addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_e6cb7944c061f80da3ff6f7682d880b6 = L.marker(
+                [51.5268327, -0.1002501],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_a6aa210a2827bea5f7a98e5c7a6fc2a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4adfda7643861aaf094d5208cbad35a0 = $(`<div id="html_4adfda7643861aaf094d5208cbad35a0" style="width: 100.0%; height: 100.0%;">Stop 1: The Green Clock on the Ring Road at Junction of Goswell Road</div>`)[0];
+                popup_a6aa210a2827bea5f7a98e5c7a6fc2a2.setContent(html_4adfda7643861aaf094d5208cbad35a0);
+            
+        
+
+        marker_e6cb7944c061f80da3ff6f7682d880b6.bindPopup(popup_a6aa210a2827bea5f7a98e5c7a6fc2a2)
+        ;
+
+        
+    
+    
+            var marker_e8e6673f6d8813716dea123d426bf7ce = L.marker(
+                [51.51875159999999, -0.0814374],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_6651172f597e10d5d2fe2ef87c0d3dd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87db4a17d3e61ccc30ec93953e5d3eb8 = $(`<div id="html_87db4a17d3e61ccc30ec93953e5d3eb8" style="width: 100.0%; height: 100.0%;">Stop 2: Liverpool Street Station, Elizabeth Line entrance</div>`)[0];
+                popup_6651172f597e10d5d2fe2ef87c0d3dd0.setContent(html_87db4a17d3e61ccc30ec93953e5d3eb8);
+            
+        
+
+        marker_e8e6673f6d8813716dea123d426bf7ce.bindPopup(popup_6651172f597e10d5d2fe2ef87c0d3dd0)
+        ;
+
+        
+    
+    
+            var poly_line_bf1af914072e2a61d57fc09a8382de25 = L.polyline(
+                [[51.5268327, -0.1002501], [51.51875159999999, -0.0814374]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_893a48a910b5ba075721cc50f27ffbab = L.marker(
+                [51.509835, -0.07654090000000001],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_781c5978dd50f8dca710e1213c386e12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc6d63f84421b6f925f1c007a2ccc3d8 = $(`<div id="html_fc6d63f84421b6f925f1c007a2ccc3d8" style="width: 100.0%; height: 100.0%;">Stop 3: Sundial, Tower Hill</div>`)[0];
+                popup_781c5978dd50f8dca710e1213c386e12.setContent(html_fc6d63f84421b6f925f1c007a2ccc3d8);
+            
+        
+
+        marker_893a48a910b5ba075721cc50f27ffbab.bindPopup(popup_781c5978dd50f8dca710e1213c386e12)
+        ;
+
+        
+    
+    
+            var poly_line_6dcfd5b095b8f35630f5d68eb4ae5ddf = L.polyline(
+                [[51.51875159999999, -0.0814374], [51.509835, -0.07654090000000001]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_c1c1578f7a4ca75e15bf9a6d2af1f820 = L.marker(
+                [51.50682279999999, -0.0701937],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_08361bc8e7e205ecba3871e259a95921 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5798e41f628723fbc742fc6f098ee563 = $(`<div id="html_5798e41f628723fbc742fc6f098ee563" style="width: 100.0%; height: 100.0%;">Stop 4: The Dickens Inn, St Katharine Docks</div>`)[0];
+                popup_08361bc8e7e205ecba3871e259a95921.setContent(html_5798e41f628723fbc742fc6f098ee563);
+            
+        
+
+        marker_c1c1578f7a4ca75e15bf9a6d2af1f820.bindPopup(popup_08361bc8e7e205ecba3871e259a95921)
+        ;
+
+        
+    
+    
+            var poly_line_c0be431ebc289b0e9323373725a7bfd6 = L.polyline(
+                [[51.509835, -0.07654090000000001], [51.50682279999999, -0.0701937]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_0c8284994ff871d1d3b810aa91e9d5ba = L.marker(
+                [51.5019465, -0.072381],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_682f03e9e0beeb6417b03017ed07d2d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3014f4c73594cd6f2e9ab8092fa924fe = $(`<div id="html_3014f4c73594cd6f2e9ab8092fa924fe" style="width: 100.0%; height: 100.0%;">Stop 5: Shad Thames, iron bridges</div>`)[0];
+                popup_682f03e9e0beeb6417b03017ed07d2d5.setContent(html_3014f4c73594cd6f2e9ab8092fa924fe);
+            
+        
+
+        marker_0c8284994ff871d1d3b810aa91e9d5ba.bindPopup(popup_682f03e9e0beeb6417b03017ed07d2d5)
+        ;
+
+        
+    
+    
+            var poly_line_df318a22a540d8d579a5d83ab9c23a7b = L.polyline(
+                [[51.50682279999999, -0.0701937], [51.5019465, -0.072381]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_9d5006e739df6d6cd408e90eb75c4d9b = L.marker(
+                [51.5070209, -0.0918904],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_e1c7e71230f4e4735657eaed2d92791e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8bf612943b3ef00d5eec34482f178c5 = $(`<div id="html_a8bf612943b3ef00d5eec34482f178c5" style="width: 100.0%; height: 100.0%;">Stop 6: Clink Prison Museum, Clink Street</div>`)[0];
+                popup_e1c7e71230f4e4735657eaed2d92791e.setContent(html_a8bf612943b3ef00d5eec34482f178c5);
+            
+        
+
+        marker_9d5006e739df6d6cd408e90eb75c4d9b.bindPopup(popup_e1c7e71230f4e4735657eaed2d92791e)
+        ;
+
+        
+    
+    
+            var poly_line_5634f2fc8d1a12c2eeb03f8638f1bd36 = L.polyline(
+                [[51.5019465, -0.072381], [51.5070209, -0.0918904]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_c853e2b394c76bc743ab7fbd7ae977c5 = L.marker(
+                [51.50759530000001, -0.0993564],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_c50811bb1826606efa85071510da3716 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9555185cefb51c330b7585d66b97c11b = $(`<div id="html_9555185cefb51c330b7585d66b97c11b" style="width: 100.0%; height: 100.0%;">Stop 7: Tate Modern, river side entrance</div>`)[0];
+                popup_c50811bb1826606efa85071510da3716.setContent(html_9555185cefb51c330b7585d66b97c11b);
+            
+        
+
+        marker_c853e2b394c76bc743ab7fbd7ae977c5.bindPopup(popup_c50811bb1826606efa85071510da3716)
+        ;
+
+        
+    
+    
+            var poly_line_26be06999755624c4bf1ab77dce8974d = L.polyline(
+                [[51.5070209, -0.0918904], [51.50759530000001, -0.0993564]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_e36fc831fff1a9f99ff445d2fea9f5da = L.marker(
+                [51.5066679, -0.108495],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_d108d2e8ebaa5c05997b02fdb02a1107 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0252c0290eec1b9017ab7dddc2c6cbb1 = $(`<div id="html_0252c0290eec1b9017ab7dddc2c6cbb1" style="width: 100.0%; height: 100.0%;">Stop 8: 61 Stamford Street, London Nautical School</div>`)[0];
+                popup_d108d2e8ebaa5c05997b02fdb02a1107.setContent(html_0252c0290eec1b9017ab7dddc2c6cbb1);
+            
+        
+
+        marker_e36fc831fff1a9f99ff445d2fea9f5da.bindPopup(popup_d108d2e8ebaa5c05997b02fdb02a1107)
+        ;
+
+        
+    
+    
+            var poly_line_06a856ce57e018204e4eb14371719d23 = L.polyline(
+                [[51.50759530000001, -0.0993564], [51.5066679, -0.108495]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_eaebd3a2bd1e618bb6019f20c9f3b65c = L.marker(
+                [51.50183390000001, -0.1155436],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_a80aa283b1d6280754a75806d39723ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66be774aad773ae31052ea69f6c1d6eb = $(`<div id="html_66be774aad773ae31052ea69f6c1d6eb" style="width: 100.0%; height: 100.0%;">Stop 9: Leake Street Arches, Graffiti Tunnel</div>`)[0];
+                popup_a80aa283b1d6280754a75806d39723ff.setContent(html_66be774aad773ae31052ea69f6c1d6eb);
+            
+        
+
+        marker_eaebd3a2bd1e618bb6019f20c9f3b65c.bindPopup(popup_a80aa283b1d6280754a75806d39723ff)
+        ;
+
+        
+    
+    
+            var poly_line_d43915e1c4a615a378dbb9b513853c75 = L.polyline(
+                [[51.5066679, -0.108495], [51.50183390000001, -0.1155436]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_c3e4b80551f662df85b5ec9a0dc34cb1 = L.marker(
+                [51.50850670000001, -0.1203086],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_6f7a8a786e7770745a717e78bc2e4d25 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26fb68cfef00b696d1cd9b0945e0fb23 = $(`<div id="html_26fb68cfef00b696d1cd9b0945e0fb23" style="width: 100.0%; height: 100.0%;">Stop 10: Cleopatra's Needle, Victoria Embankment</div>`)[0];
+                popup_6f7a8a786e7770745a717e78bc2e4d25.setContent(html_26fb68cfef00b696d1cd9b0945e0fb23);
+            
+        
+
+        marker_c3e4b80551f662df85b5ec9a0dc34cb1.bindPopup(popup_6f7a8a786e7770745a717e78bc2e4d25)
+        ;
+
+        
+    
+    
+            var poly_line_77e1dd5aaca8f47b1344d90cb59be1ac = L.polyline(
+                [[51.50183390000001, -0.1155436], [51.50850670000001, -0.1203086]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_563f370f4938d95c1fc1e8b7443f9768 = L.marker(
+                [51.508039, -0.128069],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_29f06ab5918c1c0dbfff41ec142044be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f269760b2d150cc7773b5d8d72c37e9 = $(`<div id="html_7f269760b2d150cc7773b5d8d72c37e9" style="width: 100.0%; height: 100.0%;">Stop 11: Trafalgar Square, with a lion</div>`)[0];
+                popup_29f06ab5918c1c0dbfff41ec142044be.setContent(html_7f269760b2d150cc7773b5d8d72c37e9);
+            
+        
+
+        marker_563f370f4938d95c1fc1e8b7443f9768.bindPopup(popup_29f06ab5918c1c0dbfff41ec142044be)
+        ;
+
+        
+    
+    
+            var poly_line_bd19d1a92ef8a9cc78c40277bff405c8 = L.polyline(
+                [[51.50850670000001, -0.1203086], [51.508039, -0.128069]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_bfdca404e226a6b2616a6c7d7c29e4d7 = L.marker(
+                [51.5072178, -0.1275862],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_8322b872fb67e308069a7526b29db178 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fb7779afdc8af6ddf845cdd61b54cbdb = $(`<div id="html_fb7779afdc8af6ddf845cdd61b54cbdb" style="width: 100.0%; height: 100.0%;">Stop 12: WE Art installation, London Bridge Street</div>`)[0];
+                popup_8322b872fb67e308069a7526b29db178.setContent(html_fb7779afdc8af6ddf845cdd61b54cbdb);
+            
+        
+
+        marker_bfdca404e226a6b2616a6c7d7c29e4d7.bindPopup(popup_8322b872fb67e308069a7526b29db178)
+        ;
+
+        
+    
+    
+            var poly_line_9ccf4f7fd6e5ddbe8fdb061d593162fe = L.polyline(
+                [[51.508039, -0.128069], [51.5072178, -0.1275862]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_20cf13d0034a694334bbe5ee21975520 = L.marker(
+                [51.49845759999999, -0.1264205],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_58156ebf534790d42d655a4725d9d226 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9d1924d96ddb44a81616eca1d417e0f = $(`<div id="html_c9d1924d96ddb44a81616eca1d417e0f" style="width: 100.0%; height: 100.0%;">Stop 13: Jewel Tower, Abingdon Street, Westminster</div>`)[0];
+                popup_58156ebf534790d42d655a4725d9d226.setContent(html_c9d1924d96ddb44a81616eca1d417e0f);
+            
+        
+
+        marker_20cf13d0034a694334bbe5ee21975520.bindPopup(popup_58156ebf534790d42d655a4725d9d226)
+        ;
+
+        
+    
+    
+            var poly_line_1b214824821b71b958b10acd7c8d5695 = L.polyline(
+                [[51.5072178, -0.1275862], [51.49845759999999, -0.1264205]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_9520e45eed6746142f89b242638499aa = L.marker(
+                [51.4966569, -0.14258],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_192d88c4d7f1597a453fc0b7fd35de30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f23f0b664fa5cfebbff105e4f334917 = $(`<div id="html_1f23f0b664fa5cfebbff105e4f334917" style="width: 100.0%; height: 100.0%;">Stop 14: Victoria Palace Theatre, Victoria Street</div>`)[0];
+                popup_192d88c4d7f1597a453fc0b7fd35de30.setContent(html_1f23f0b664fa5cfebbff105e4f334917);
+            
+        
+
+        marker_9520e45eed6746142f89b242638499aa.bindPopup(popup_192d88c4d7f1597a453fc0b7fd35de30)
+        ;
+
+        
+    
+    
+            var poly_line_02d07dc25e4a806325db11780d0a1b8d = L.polyline(
+                [[51.49845759999999, -0.1264205], [51.4966569, -0.14258]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_7999d200feef100b3c45dbb80fbfac08 = L.marker(
+                [51.4936706, -0.1737548],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_90c18b71a5489a0947b2d71cf910f8b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e2edac4f891121ac503ae35daedd2f6 = $(`<div id="html_4e2edac4f891121ac503ae35daedd2f6" style="width: 100.0%; height: 100.0%;">Stop 15: Bela Bartok statue, Old Brompton Road, South Kensington</div>`)[0];
+                popup_90c18b71a5489a0947b2d71cf910f8b4.setContent(html_4e2edac4f891121ac503ae35daedd2f6);
+            
+        
+
+        marker_7999d200feef100b3c45dbb80fbfac08.bindPopup(popup_90c18b71a5489a0947b2d71cf910f8b4)
+        ;
+
+        
+    
+    
+            var poly_line_4a5018f0196212a64b611cd9150a991b = L.polyline(
+                [[51.4966569, -0.14258], [51.4936706, -0.1737548]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_2dff2d65f6ed558c25f8ff5f46cf57eb = L.marker(
+                [51.4875836, -0.1575795],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_a986e3d6d78904ea74b3fdb51880380a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab10616b2f61fb714b2dcb32835a14f1 = $(`<div id="html_ab10616b2f61fb714b2dcb32835a14f1" style="width: 100.0%; height: 100.0%;">Stop 16: Royal Hospital Chelsea, Chapel Gate</div>`)[0];
+                popup_a986e3d6d78904ea74b3fdb51880380a.setContent(html_ab10616b2f61fb714b2dcb32835a14f1);
+            
+        
+
+        marker_2dff2d65f6ed558c25f8ff5f46cf57eb.bindPopup(popup_a986e3d6d78904ea74b3fdb51880380a)
+        ;
+
+        
+    
+    
+            var poly_line_710c73a9264b24047c50af01f40a7b54 = L.polyline(
+                [[51.4936706, -0.1737548], [51.4875836, -0.1575795]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_ba5bc2b00b62c3136d3482c478a285a4 = L.marker(
+                [51.5029347, -0.1508562],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_ae643c02ed89a3b80cebdc7282433609 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d83de780bc9ef364ac94a730d5e3620 = $(`<div id="html_6d83de780bc9ef364ac94a730d5e3620" style="width: 100.0%; height: 100.0%;">Stop 17: Queen Elizabeth Gate, Hyde Park Corner</div>`)[0];
+                popup_ae643c02ed89a3b80cebdc7282433609.setContent(html_6d83de780bc9ef364ac94a730d5e3620);
+            
+        
+
+        marker_ba5bc2b00b62c3136d3482c478a285a4.bindPopup(popup_ae643c02ed89a3b80cebdc7282433609)
+        ;
+
+        
+    
+    
+            var poly_line_ffb1272bac0e6af7ed8b86850850f5f3 = L.polyline(
+                [[51.4875836, -0.1575795], [51.5029347, -0.1508562]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_bb55493d90baaa26c0831cbdcb53bac6 = L.marker(
+                [51.5224432, -0.163173],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_c41c5b840a21fcf6558ab9b7af7e314c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53b74c68d5882e89f850652e3cc73b8f = $(`<div id="html_53b74c68d5882e89f850652e3cc73b8f" style="width: 100.0%; height: 100.0%;">Stop 18: Marylebone train station, main entrance</div>`)[0];
+                popup_c41c5b840a21fcf6558ab9b7af7e314c.setContent(html_53b74c68d5882e89f850652e3cc73b8f);
+            
+        
+
+        marker_bb55493d90baaa26c0831cbdcb53bac6.bindPopup(popup_c41c5b840a21fcf6558ab9b7af7e314c)
+        ;
+
+        
+    
+    
+            var poly_line_49b1d8fb1abbfa79a6977b53301d9f25 = L.polyline(
+                [[51.5029347, -0.1508562], [51.5224432, -0.163173]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_e92163f181d1b09b2373ef8b6433e82a = L.marker(
+                [51.5156655, -0.2055232],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_a5295234891c4239526a21d3d9b5e2e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_527cea6a2435487307e45d290822a9b6 = $(`<div id="html_527cea6a2435487307e45d290822a9b6" style="width: 100.0%; height: 100.0%;">Stop 19: Notting Hill Bookshop, Blenheim Crescent</div>`)[0];
+                popup_a5295234891c4239526a21d3d9b5e2e8.setContent(html_527cea6a2435487307e45d290822a9b6);
+            
+        
+
+        marker_e92163f181d1b09b2373ef8b6433e82a.bindPopup(popup_a5295234891c4239526a21d3d9b5e2e8)
+        ;
+
+        
+    
+    
+            var poly_line_76d4af85b41efa13b0de4d3d7f813438 = L.polyline(
+                [[51.5224432, -0.163173], [51.5156655, -0.2055232]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_68545a111a14731fc27437dc54e570e3 = L.marker(
+                [51.5065855, -0.1877335],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_6d306b955f7052bea44a4cef2879d0a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b462aa5385218ccdfdd96b34dcc5127 = $(`<div id="html_7b462aa5385218ccdfdd96b34dcc5127" style="width: 100.0%; height: 100.0%;">Stop 20: The Orangery, Kensington Palace Gardens</div>`)[0];
+                popup_6d306b955f7052bea44a4cef2879d0a5.setContent(html_7b462aa5385218ccdfdd96b34dcc5127);
+            
+        
+
+        marker_68545a111a14731fc27437dc54e570e3.bindPopup(popup_6d306b955f7052bea44a4cef2879d0a5)
+        ;
+
+        
+    
+    
+            var poly_line_3ee04a677957c0526840346f54451b0e = L.polyline(
+                [[51.5156655, -0.2055232], [51.5065855, -0.1877335]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_5e3e9bbe04ec9fe69ba65bdbf5822c1b = L.marker(
+                [51.5188722, -0.1423181],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_77a04f74bc07a6f921e8829cb6569bbb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce99c8658620b0bc4b6c6351fc59b879 = $(`<div id="html_ce99c8658620b0bc4b6c6351fc59b879" style="width: 100.0%; height: 100.0%;">Stop 21: BBC Centre, Langham Street entrance</div>`)[0];
+                popup_77a04f74bc07a6f921e8829cb6569bbb.setContent(html_ce99c8658620b0bc4b6c6351fc59b879);
+            
+        
+
+        marker_5e3e9bbe04ec9fe69ba65bdbf5822c1b.bindPopup(popup_77a04f74bc07a6f921e8829cb6569bbb)
+        ;
+
+        
+    
+    
+            var poly_line_2a1619248f8ce868202040db11029a30 = L.polyline(
+                [[51.5065855, -0.1877335], [51.5188722, -0.1423181]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_b96abf2f6f2cdbd1b3f3b010bd6be912 = L.marker(
+                [51.5200263, -0.133526],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_0f616f7156905bd3b10638d856d9f7a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7da5d1f3341ac2344400345bdf0d313f = $(`<div id="html_7da5d1f3341ac2344400345bdf0d313f" style="width: 100.0%; height: 100.0%;">Stop 22: 213-215 Tottenham Court Rd, London</div>`)[0];
+                popup_0f616f7156905bd3b10638d856d9f7a8.setContent(html_7da5d1f3341ac2344400345bdf0d313f);
+            
+        
+
+        marker_b96abf2f6f2cdbd1b3f3b010bd6be912.bindPopup(popup_0f616f7156905bd3b10638d856d9f7a8)
+        ;
+
+        
+    
+    
+            var poly_line_8904bd4a7115c8520430c8a4e2b8c365 = L.polyline(
+                [[51.5188722, -0.1423181], [51.5200263, -0.133526]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_e05bcefbdbc26533476c94fb01205b14 = L.marker(
+                [51.510359, -0.1300625],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_ce9ce83ee011e9fcf489ba9c180bc473 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0805b27a87ca332c0cd648200bd614c3 = $(`<div id="html_0805b27a87ca332c0cd648200bd614c3" style="width: 100.0%; height: 100.0%;">Stop 23: Leicester Square, bronze statues</div>`)[0];
+                popup_ce9ce83ee011e9fcf489ba9c180bc473.setContent(html_0805b27a87ca332c0cd648200bd614c3);
+            
+        
+
+        marker_e05bcefbdbc26533476c94fb01205b14.bindPopup(popup_ce9ce83ee011e9fcf489ba9c180bc473)
+        ;
+
+        
+    
+    
+            var poly_line_2e8b25ce03d3cef0ed83f7543a1cbf03 = L.polyline(
+                [[51.5200263, -0.133526], [51.510359, -0.1300625]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_975266aaeacfe3e42157385c2a36d2b4 = L.marker(
+                [51.5136798, -0.1224683],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_85e56761abb2ec74430f46576ca667f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d4462186d2b19a2f15d07f2ccc766e3 = $(`<div id="html_7d4462186d2b19a2f15d07f2ccc766e3" style="width: 100.0%; height: 100.0%;">Stop 24: Young Dancer statue, Bow Street, Covent Garden</div>`)[0];
+                popup_85e56761abb2ec74430f46576ca667f6.setContent(html_7d4462186d2b19a2f15d07f2ccc766e3);
+            
+        
+
+        marker_975266aaeacfe3e42157385c2a36d2b4.bindPopup(popup_85e56761abb2ec74430f46576ca667f6)
+        ;
+
+        
+    
+    
+            var poly_line_dfd85184d8b656224f60860ee821de0a = L.polyline(
+                [[51.510359, -0.1300625], [51.5136798, -0.1224683]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_232506baf2066d0206531c9e228e7e11 = L.marker(
+                [51.51494169999999, -0.117232],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_744ecbb8a3de8b53792881dbdb38c375 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6163c4ce5f061edf8b1fe2097c0f5107 = $(`<div id="html_6163c4ce5f061edf8b1fe2097c0f5107" style="width: 100.0%; height: 100.0%;">Stop 25: The Old Curiosity Shop, Portsmouth Street, London</div>`)[0];
+                popup_744ecbb8a3de8b53792881dbdb38c375.setContent(html_6163c4ce5f061edf8b1fe2097c0f5107);
+            
+        
+
+        marker_232506baf2066d0206531c9e228e7e11.bindPopup(popup_744ecbb8a3de8b53792881dbdb38c375)
+        ;
+
+        
+    
+    
+            var poly_line_20670cd967b3aca514e5ceea14a5d570 = L.polyline(
+                [[51.5136798, -0.1224683], [51.51494169999999, -0.117232]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_2820ddf8d26e1ed697457de7c8dce317 = L.marker(
+                [51.5150537, -0.1077446],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_32cb66ae4fe8a818809fe1b24688daa1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08e144345189138bfe6663bb79eb4668 = $(`<div id="html_08e144345189138bfe6663bb79eb4668" style="width: 100.0%; height: 100.0%;">Stop 26: Hodge the Cat, Gough Square</div>`)[0];
+                popup_32cb66ae4fe8a818809fe1b24688daa1.setContent(html_08e144345189138bfe6663bb79eb4668);
+            
+        
+
+        marker_2820ddf8d26e1ed697457de7c8dce317.bindPopup(popup_32cb66ae4fe8a818809fe1b24688daa1)
+        ;
+
+        
+    
+    
+            var poly_line_709bb5aa9762c8834fdeb91b0dfe951c = L.polyline(
+                [[51.51494169999999, -0.117232], [51.5150537, -0.1077446]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_55f98a1020da8420465de69085324e83 = L.marker(
+                [51.535284, -0.125208],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_d624e9aa7cc71391f9a7036269584398 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c31cd997d4fb21abb975c8443a89dd55 = $(`<div id="html_c31cd997d4fb21abb975c8443a89dd55" style="width: 100.0%; height: 100.0%;">Stop 27: Granary Square, Kings Cross</div>`)[0];
+                popup_d624e9aa7cc71391f9a7036269584398.setContent(html_c31cd997d4fb21abb975c8443a89dd55);
+            
+        
+
+        marker_55f98a1020da8420465de69085324e83.bindPopup(popup_d624e9aa7cc71391f9a7036269584398)
+        ;
+
+        
+    
+    
+            var poly_line_fbbd07c0e771290c9a440f2b53ca8545 = L.polyline(
+                [[51.5150537, -0.1077446], [51.535284, -0.125208]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_d44da4cb01e5f56511a404491d7eab96 = L.marker(
+                [51.5184945, -0.1001676],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_61a3e24b7d9fb13197008c07d01f370f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f8f6d1e7198b959d2a784a29bf7cff2f = $(`<div id="html_f8f6d1e7198b959d2a784a29bf7cff2f" style="width: 100.0%; height: 100.0%;">Stop 28: St Bartholomew's Gatehouse, West Smithfield</div>`)[0];
+                popup_61a3e24b7d9fb13197008c07d01f370f.setContent(html_f8f6d1e7198b959d2a784a29bf7cff2f);
+            
+        
+
+        marker_d44da4cb01e5f56511a404491d7eab96.bindPopup(popup_61a3e24b7d9fb13197008c07d01f370f)
+        ;
+
+        
+    
+    
+            var poly_line_dd13324b54a719a977e9fb45ebb8178d = L.polyline(
+                [[51.535284, -0.125208], [51.5184945, -0.1001676]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+            var marker_dd90e821ce272c138f8cbebe9c13d872 = L.marker(
+                [51.5268327, -0.1002501],
+                {
+}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+    
+        var popup_b9064683fc6e7da666c3615330156dd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b19d2f2f58d18e25264eca4f3bc5bc8 = $(`<div id="html_6b19d2f2f58d18e25264eca4f3bc5bc8" style="width: 100.0%; height: 100.0%;">Stop 29: The Green Clock on the Ring Road at Junction of Goswell Road</div>`)[0];
+                popup_b9064683fc6e7da666c3615330156dd4.setContent(html_6b19d2f2f58d18e25264eca4f3bc5bc8);
+            
+        
+
+        marker_dd90e821ce272c138f8cbebe9c13d872.bindPopup(popup_b9064683fc6e7da666c3615330156dd4)
+        ;
+
+        
+    
+    
+            var poly_line_0082dbb91e4809b5143d2e8f51770d7f = L.polyline(
+                [[51.5184945, -0.1001676], [51.5268327, -0.1002501]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_783b2f0dde6f4c310d6dda9f490250f1);
+        
+</script>
 </html>
