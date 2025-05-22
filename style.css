@@ -44,3 +44,21 @@ footer {
   background: #eee;
   font-size: 0.9em;
 }
+
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+figcaption {
+  font-size: 0.95em;
+  color: #555;
+  margin-top: 8px;
+}
