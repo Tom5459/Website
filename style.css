@@ -36,6 +36,11 @@ nav a:hover {
 
 h1, h2 {
   color: #444;
+
+}
+
+.centered-heading {
+  text-align: center;
 }
 
 footer {
