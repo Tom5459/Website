@@ -67,3 +67,9 @@ figcaption {
   color: #555;
   margin-top: 8px;
 }
+
+.instagram-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
