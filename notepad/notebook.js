@@ -3,31 +3,42 @@ const ctx = canvas.getContext('2d');
 let drawing = false;
 let tool = 'pen';
 
+let lastX = 0;
+let lastY = 0;
+
 function setTool(selected) {
   tool = selected;
 }
 
-canvas.addEventListener('pointerdown', startDraw);
-canvas.addEventListener('pointermove', draw);
-canvas.addEventListener('pointerup', () => drawing = false);
-canvas.addEventListener('pointerleave', () => drawing = false);
-
-function startDraw(e) {
+canvas.addEventListener('pointerdown', e => {
   drawing = true;
-  draw(e); // draw a dot
-}
+  const rect = canvas.getBoundingClientRect();
+  lastX = e.clientX - rect.left;
+  lastY = e.clientY - rect.top;
+});
 
-function draw(e) {
+canvas.addEventListener('pointermove', e => {
   if (!drawing) return;
+
   const rect = canvas.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  ctx.fillStyle = tool === 'pen' ? '#000000' : '#ffffff';
+  ctx.strokeStyle = tool === 'pen' ? '#000000' : '#ffffff';
+  ctx.lineWidth = 4;
+  ctx.lineCap = 'round';
+
   ctx.beginPath();
-  ctx.arc(x, y, 4, 0, Math.PI * 2); // dot size
-  ctx.fill();
-}
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(x, y);
+  ctx.stroke();
+
+  lastX = x;
+  lastY = y;
+});
+
+canvas.addEventListener('pointerup', () => drawing = false);
+canvas.addEventListener('pointerleave', () => drawing = false);
 
 function clearCanvas() {
   ctx.fillStyle = '#ffffff';
@@ -41,5 +52,6 @@ function saveCanvas() {
   link.click();
 }
 
-// Initialize blank white canvas
+// Initialize white background
 clearCanvas();
+
