@@ -2,13 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pixel Art Data</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESP32 Pixel Art Data</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Styles specific to this page */
+    .oled-container {
+      background: #222;
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+    canvas {
+      background-color: #000; /* OLED Black */
+      border: 2px solid #555;
+      image-rendering: pixelated; /* Keeps pixels sharp */
+      width: 256px; /* Display at 2x zoom for visibility */
+      height: 128px;
+    }
+
+    #esp-content {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      height: 100px;
+      overflow-y: scroll;
+      white-space: pre-wrap;
+      margin-top: 10px;
+      color: #333;
+    }
+    
+    .instructions {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>ESP32 Pixel Art Source</h1> 
-  
-  <div id="esp-content">
-    0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+  <header>
+    <h1>ESP32 Display Manager</h1>
+  </header>
+
+  <main class="container" style="text-align: center;">
+    
+    <h2>Live Preview</h2>
+    <div class="oled-container">
+      <canvas id="oledCanvas" width="128" height="64"></canvas>
+    </div>
+
+    <h2>Data Source</h2>
+    <p class="instructions">
+      Paste your <strong>128x64</strong> hex code from 
+      <a href="https://javl.github.io/image2cpp/" target="_blank">image2cpp</a> below.
+      <br>(Settings: Draw Mode=Horizontal, Background=White, Invert=Yes)
+    </p>
+
+    <div id="esp-content" oninput="renderPreview()">
+0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0xff, 0x1c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x7f, 0xe3, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 
 0xbe, 0xb8, 0xe4, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0e, 0x00, 0x00, 
@@ -72,7 +128,56 @@
 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-    </div>
+</div>
+  </main>
 
+  <script>
+    function renderPreview() {
+      const canvas = document.getElementById('oledCanvas');
+      const ctx = canvas.getContext('2d');
+      const rawText = document.getElementById('esp-content').innerText;
+      
+      // Clean up the text: remove '0x', commas, newlines, and spaces
+      // Then parse into an array of integers
+      const hexValues = rawText
+        .replace(/0x/g, '')
+        .replace(/,/g, ' ')
+        .replace(/\n/g, ' ')
+        .split(' ')
+        .filter(x => x.trim() !== '') // Remove empty strings
+        .map(x => parseInt(x, 16));
+
+      // Clear Screen
+      ctx.fillStyle = "#000";
+      ctx.fillRect(0, 0, 128, 64);
+      
+      // Draw Pixels (White)
+      ctx.fillStyle = "#FFF";
+      
+      let byteIndex = 0;
+      
+      // Loop through 64 rows and 128 columns (Horizontal addressing)
+      // Standard mapping: The data goes left->right, then down to next row
+      for (let y = 0; y < 64; y++) {
+        for (let x = 0; x < 128; x += 8) {
+          if (byteIndex >= hexValues.length) break;
+          
+          let byte = hexValues[byteIndex++];
+          
+          // Read 8 bits from the byte
+          for (let bit = 0; bit < 8; bit++) {
+            // Check if the bit is set (most significant bit first usually)
+            // For standard image2cpp "Horizontal", bit 7 is the leftmost pixel of the byte
+            if (byte & (0x80 >> bit)) {
+              ctx.fillRect(x + bit, y, 1, 1);
+            }
+          }
+        }
+      }
+    }
+
+    // Run on load
+    window.onload = renderPreview;
+  </script>
 </body>
 </html>
